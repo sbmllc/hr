@@ -1,0 +1,365 @@
+<odoo>
+  <data noupdate="1">
+
+    <!-- =========================
+         Attachments (PDF sources)
+         ========================= -->
+    <record id="att_offer_en" model="ir.attachment">
+      <field name="name">Offer Letter - EN (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/offer_letter_en.pdf"/>
+    </record>
+
+    <record id="att_offer_es" model="ir.attachment">
+      <field name="name">Offer Letter - ES (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/offer_letter_es.pdf"/>
+    </record>
+
+    <record id="att_handbook_en" model="ir.attachment">
+      <field name="name">Handbook Acknowledgment - EN (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/handbook_ack_en.pdf"/>
+    </record>
+
+    <record id="att_handbook_es" model="ir.attachment">
+      <field name="name">Handbook Acknowledgment - ES (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/handbook_ack_es.pdf"/>
+    </record>
+
+    <record id="att_conf_en" model="ir.attachment">
+      <field name="name">Confidentiality - EN (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/confidentiality_en.pdf"/>
+    </record>
+
+    <record id="att_conf_es" model="ir.attachment">
+      <field name="name">Confidentiality - ES (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/confidentiality_es.pdf"/>
+    </record>
+
+    <record id="att_time_en" model="ir.attachment">
+      <field name="name">Timekeeping - EN (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/timekeeping_en.pdf"/>
+    </record>
+
+    <record id="att_time_es" model="ir.attachment">
+      <field name="name">Timekeeping - ES (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/timekeeping_es.pdf"/>
+    </record>
+
+    <record id="att_ah_en" model="ir.attachment">
+      <field name="name">Anti-Harassment - EN (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/anti_harassment_en.pdf"/>
+    </record>
+
+    <record id="att_ah_es" model="ir.attachment">
+      <field name="name">Anti-Harassment - ES (Placeholder).pdf</field>
+      <field name="type">binary</field>
+      <field name="mimetype">application/pdf</field>
+      <field name="datas" type="base64" file="sbm_hr_sign_placeholders/static/src/pdf/anti_harassment_es.pdf"/>
+    </record>
+
+    <!-- =========================
+         Sign templates (EN/ES)
+         Note: field positions may need adjustment in Odoo UI.
+         ========================= -->
+    <record id="tmpl_offer_en" model="sign.template">
+      <field name="name">SBM - Offer Letter (EN) - Placeholder</field>
+      <field name="attachment_id" ref="att_offer_en"/>
+    </record>
+
+    <record id="tmpl_offer_es" model="sign.template">
+      <field name="name">SBM - Offer Letter (ES) - Placeholder</field>
+      <field name="attachment_id" ref="att_offer_es"/>
+    </record>
+
+    <record id="tmpl_handbook_en" model="sign.template">
+      <field name="name">SBM - Handbook Acknowledgment (EN) - Placeholder</field>
+      <field name="attachment_id" ref="att_handbook_en"/>
+    </record>
+
+    <record id="tmpl_handbook_es" model="sign.template">
+      <field name="name">SBM - Handbook Acknowledgment (ES) - Placeholder</field>
+      <field name="attachment_id" ref="att_handbook_es"/>
+    </record>
+
+    <record id="tmpl_conf_en" model="sign.template">
+      <field name="name">SBM - Confidentiality (EN) - Placeholder</field>
+      <field name="attachment_id" ref="att_conf_en"/>
+    </record>
+
+    <record id="tmpl_conf_es" model="sign.template">
+      <field name="name">SBM - Confidentiality (ES) - Placeholder</field>
+      <field name="attachment_id" ref="att_conf_es"/>
+    </record>
+
+    <record id="tmpl_time_en" model="sign.template">
+      <field name="name">SBM - Timekeeping & OT (EN) - Placeholder</field>
+      <field name="attachment_id" ref="att_time_en"/>
+    </record>
+
+    <record id="tmpl_time_es" model="sign.template">
+      <field name="name">SBM - Timekeeping & OT (ES) - Placeholder</field>
+      <field name="attachment_id" ref="att_time_es"/>
+    </record>
+
+    <record id="tmpl_ah_en" model="sign.template">
+      <field name="name">SBM - Anti-Harassment (EN) - Placeholder</field>
+      <field name="attachment_id" ref="att_ah_en"/>
+    </record>
+
+    <record id="tmpl_ah_es" model="sign.template">
+      <field name="name">SBM - Anti-Harassment (ES) - Placeholder</field>
+      <field name="attachment_id" ref="att_ah_es"/>
+    </record>
+
+    <!-- Basic sign items (signature + date). Positions are conservative defaults.
+         If they appear off-page, adjust in Sign UI and re-save templates. -->
+    <record id="item_offer_sig_en" model="sign.item">
+      <field name="template_id" ref="tmpl_offer_en"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_offer_date_en" model="sign.item">
+      <field name="template_id" ref="tmpl_offer_en"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_offer_sig_es" model="sign.item">
+      <field name="template_id" ref="tmpl_offer_es"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_offer_date_es" model="sign.item">
+      <field name="template_id" ref="tmpl_offer_es"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <!-- Repeat items for other templates -->
+    <record id="item_hb_sig_en" model="sign.item">
+      <field name="template_id" ref="tmpl_handbook_en"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_hb_date_en" model="sign.item">
+      <field name="template_id" ref="tmpl_handbook_en"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_hb_sig_es" model="sign.item">
+      <field name="template_id" ref="tmpl_handbook_es"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_hb_date_es" model="sign.item">
+      <field name="template_id" ref="tmpl_handbook_es"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_conf_sig_en" model="sign.item">
+      <field name="template_id" ref="tmpl_conf_en"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_conf_date_en" model="sign.item">
+      <field name="template_id" ref="tmpl_conf_en"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_conf_sig_es" model="sign.item">
+      <field name="template_id" ref="tmpl_conf_es"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_conf_date_es" model="sign.item">
+      <field name="template_id" ref="tmpl_conf_es"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_time_sig_en" model="sign.item">
+      <field name="template_id" ref="tmpl_time_en"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_time_date_en" model="sign.item">
+      <field name="template_id" ref="tmpl_time_en"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_time_sig_es" model="sign.item">
+      <field name="template_id" ref="tmpl_time_es"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_time_date_es" model="sign.item">
+      <field name="template_id" ref="tmpl_time_es"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_ah_sig_en" model="sign.item">
+      <field name="template_id" ref="tmpl_ah_en"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_ah_date_en" model="sign.item">
+      <field name="template_id" ref="tmpl_ah_en"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+    <record id="item_ah_sig_es" model="sign.item">
+      <field name="template_id" ref="tmpl_ah_es"/>
+      <field name="type_id" ref="sign.sign_item_type_signature"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.10</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.45</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+    <record id="item_ah_date_es" model="sign.item">
+      <field name="template_id" ref="tmpl_ah_es"/>
+      <field name="type_id" ref="sign.sign_item_type_date"/>
+      <field name="required">True</field>
+      <field name="page">1</field>
+      <field name="posX">0.60</field>
+      <field name="posY">0.12</field>
+      <field name="width">0.25</field>
+      <field name="height">0.05</field>
+      <field name="responsible_id" ref="sbm_sign_role_employee"/>
+    </record>
+
+  </data>
+</odoo>

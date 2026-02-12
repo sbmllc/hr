@@ -1,0 +1,9 @@
+<odoo>
+  <data noupdate="1">
+    <!-- Create a standard signer role for employees -->
+    <record id="sbm_sign_role_employee" model="sign.item.role">
+      <field name="name">Employee</field>
+      <field name="sequence">10</field>
+    </record>
+  </data>
+</odoo>
